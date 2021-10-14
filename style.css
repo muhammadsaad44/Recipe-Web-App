@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Philosopher&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arvo', serif;
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background:  rgb(230, 150, 180);
+    background: radial-gradient(circle, rgb(189, 97, 192) 30%, rgb(231, 156, 178) 94%);
+    /* color: rgb(255, 255, 255); */
+}
+/* *h1 h2 h3 h4 h5 h6{
+    font-family: 'Philosopher', sans-serif;
+} */
+.mobile-container{
+    background-color: white;
+    width: 600px;
+}
+img{
+    max-width: 90%;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+header input{
+    padding: 0.5rem 2rem;
+    background-color: rgb(224, 197, 226);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 2px #643d3d1a;
+    font-family: inherit;
+    color:white;
+    font-size: 100%;
+}
+header button{
+    background-color: transparent;
+    /* background-color: transparent; */
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(231, 77, 167);
+    margin-left: 10px;
+}
+.fav-container{
+    text-align: center;
+    padding: 0.25rem 1rem;
+    background-color: rgb(224, 197, 226);
+    box-shadow: 0 0 12px 2px #e0d9d981;
+}
+.fav-meals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    
+}
+.fav-meals li img{
+    border: 2px solid rgb(224, 197, 226);
+    box-shadow: 0 0 12px 2px rgb(224, 197, 226);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.fav-meals li{
+    position: relative;
+    width: 75px;
+    margin: 5px;
+    cursor: pointer;
+    /* padding-right: 6px; */
+}
+.fav-meals li span{
+    font-size: 0.9rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+.fav-meals li .clear{
+background-color: transparent;
+position: absolute;
+top: -0.5rem;
+right: -0.5rem;
+border: none;
+cursor: pointer;
+font-size: 18px;
+opacity: 0;
+}
+.fav-meals li:hover .clear{
+    opacity: 1;
+}
+.meals{
+    margin: 1.3rem;
+    box-shadow: 0 0 12px 2px rgb(224, 197, 226);
+    overflow: hidden;
+    cursor: pointer;
+}
+.meals .random{
+    position: absolute;
+    /* top: 100px; */
+    padding: 0.3rem 0.5rem;
+    background-color: rgb(224, 197, 226);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.meal-header{
+position: relative;
+}
+
+.meal-header img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.meal-body h4{
+    margin: 0;
+}
+.meal-body .fav-btn{
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    color: rgba(218, 170, 214, 0.788);
+}
+.meal-body .fav-btn:hover{
+    outline: 2px solid rgb(224, 197, 226);
+}
+.meal-body .fav-btn.active{
+    color: rgb(199, 43, 160);
+}
+.popup-container{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top : 0; 
+    bottom: 0;
+}
+.popup{
+    background-color: white;
+    max-width: 700px;
+    max-height: 100vh;
+    width: 100%;
+    padding: 0 2rem;
+    /* border-radius: 5% ; */
+    position: relative;
+    overflow: auto;
+}
+.popup img{
+    border-radius: 3%;
+    max-height:  500px;
+}
+.meal-info h2{
+    text-align: center;
+    color: rgb(214, 102, 196);
+}
+.popup #close-popup{
+    position: absolute;
+    color: rgb(214, 102, 196);
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
